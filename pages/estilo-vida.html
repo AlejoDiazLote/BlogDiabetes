@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Estilo de Vida - Diabetes Gestacional</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../css/styleGeneral.css" />
+    <link rel="stylesheet" href="../css/styleEstiloVida.css" />
+  </head>
+  <body>
+    <header>
+      <button class="menu-toggle" id="menu-toggle">☰</button>
+      <h1 class="menu-toggle">Diabetes Gestacional</h1>
+      <nav id="nav-links">
+        <ul>
+          <li><a href="../index.html">🏠 Inicio</a></li>
+          <li><a href="generalidades.html"> 📖 Generalidades</a></li>
+          <li><a href="diagnostico.html"> 🩺 Diagnóstico</a></li>
+          <li><a href="alimentacion.html">🍎 Alimentación</a></li>
+          <li><a href="estilo-vida.html"> 🚶 Estilo de Vida</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="content-container">
+      <h1 class="page-title">Estilo de vida saludable y monitoreo</h1>
+
+      <div class="card">
+        <div class="card-header">
+          <i class="fas fa-heart"></i>
+          <h3>Pilares del manejo de la diabetes gestacional</h3>
+        </div>
+        <div class="card-body">
+          <p>
+            Además de la alimentación, el ejercicio regular y el monitoreo de la
+            glucosa son pilares fundamentales para un manejo exitoso de la
+            diabetes gestacional. El bienestar emocional también juega un papel
+            crucial.
+          </p>
+        </div>
+      </div>
+
+      <div class="columns-layout" style="margin-top: 30px">
+        <div class="card">
+          <div class="card-header">
+            <i class="fas fa-tachometer-alt"></i>
+            <h3>Monitoreo de la glucosa</h3>
+          </div>
+          <div class="card-body">
+            <p>
+              El monitoreo regular de tus niveles de glucosa en sangre es
+              esencial para entender cómo tu cuerpo responde a los alimentos y
+              al ejercicio, y para asegurar que tus niveles se mantengan dentro
+              del rango objetivo.
+            </p>
+
+            <div class="info-highlight">
+              <i class="fas fa-info-circle"></i> Tu médico o enfermera te
+              enseñará cómo usar un glucómetro para medir tu glucosa en casa.
+            </div>
+
+            <ul class="factor-list">
+              <li>
+                <i class="fas fa-syringe"></i>
+                <strong>Uso del glucómetro:</strong> Generalmente implica
+                pincharte el dedo para obtener una pequeña gota de sangre.
+              </li>
+              <li>
+                <i class="fas fa-clipboard-list"></i>
+                <strong>Registro diario:</strong> Lleva un registro de tus
+                lecturas de glucosa (antes y después de las comidas, y al
+                levantarte).
+              </li>
+            </ul>
+
+            <img
+              src="../images/estilovida1.png"
+              alt="Mujer embarazada usando un glucómetro"
+              class="card-image"
+            />
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <i class="fas fa-running"></i>
+            <h3>Ejercicio moderado</h3>
+          </div>
+          <div class="card-body">
+            <p>
+              La actividad física es muy beneficiosa para controlar la diabetes
+              gestacional, ya que ayuda a las células a usar mejor la insulina y
+              a bajar los niveles de glucosa.
+            </p>
+
+            <div class="info-highlight">
+              <i class="fas fa-exclamation-circle"></i> Es importante que
+              cualquier rutina de ejercicio sea aprobada por tu médico.
+            </div>
+
+            <h4>Actividades recomendadas:</h4>
+            <div class="activity-grid">
+              <div class="activity-card">
+                <div class="activity-icon"><i class="fas fa-walking"></i></div>
+                <h4 class="activity-title">Caminar</h4>
+                <p>Al menos 30 minutos al día, la mayoría de los días</p>
+              </div>
+
+              <div class="activity-card">
+                <div class="activity-icon"><i class="fas fa-swimmer"></i></div>
+                <h4 class="activity-title">Nadar</h4>
+                <p>Ejercicio de bajo impacto ideal para embarazadas</p>
+              </div>
+
+              <div class="activity-card">
+                <div class="activity-icon"><i class="fas fa-bicycle"></i></div>
+                <h4 class="activity-title">Bicicleta estática</h4>
+                <p>Segura y controlada para el embarazo</p>
+              </div>
+
+              <div class="activity-card">
+                <div class="activity-icon"><i class="fas fa-spa"></i></div>
+                <h4 class="activity-title">Yoga prenatal</h4>
+                <p>Mejora flexibilidad y reduce estrés</p>
+              </div>
+            </div>
+
+            <div
+              class="info-highlight"
+              style="
+                background: linear-gradient(to right, #ffe6e6, #ffcccc);
+                border-left: 5px solid #dc3545;
+              "
+            >
+              <i class="fas fa-exclamation-triangle"></i>
+              <strong>Cuándo evitar el ejercicio:</strong> Si tienes amenaza de
+              parto prematuro, hipertensión severa, sangrado vaginal, o
+              cualquier otra condición médica que tu médico indique.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="video-container">
+        <video controls poster="../images/mujer-embarazada-yoga.jpg">
+          <source
+            src="https://www.dropbox.com/scl/fi/i3j863pdn3ax11w417adt/video1.mp4?rlkey=myf1gljmthazal2c3hzk27j7q&st=wqii3wsg&dl=0"
+            type="video/mp4"
+          />
+          Tu navegador no soporta el elemento de video.
+        </video>
+      </div>
+
+      <div id="video" class="video-container">
+        <div class="modal-content">
+          <video id="video" controls>
+            <source
+              src="https://dl.dropboxusercontent.com/scl/fi/i3j863pdn3ax11w417adt/video1.mp4?rlkey=myf1gljmthazal2c3hzk27j7q&st=wqii3wsg"
+              type="video/mp4"
+            />
+            Tu navegador no soporta el elemento de video.
+          </video>
+        </div>
+      </div>
+      <div class="wellness-section">
+        <div class="wellness-card">
+          <div class="wellness-header">
+            <div class="wellness-icon"><i class="fas fa-brain"></i></div>
+            <h3 class="wellness-title">Bienestar emocional</h3>
+          </div>
+          <p>
+            Manejar la diabetes gestacional puede ser estresante. Cuidar tu
+            salud mental es tan importante como tu salud física.
+          </p>
+
+          <ul class="factor-list">
+            <li>
+              <i class="fas fa-bed"></i> <strong>Dormir bien:</strong> Intenta
+              dormir entre 7 y 9 horas por noche. La falta de sueño puede
+              afectar los niveles de glucosa.
+            </li>
+            <li>
+              <i class="fas fa-wind"></i>
+              <strong>Reducir el estrés:</strong> Practica técnicas de
+              relajación como la meditación, la respiración profunda o el
+              mindfulness.
+            </li>
+            <li>
+              <i class="fas fa-hands-helping"></i>
+              <strong>Buscar redes de apoyo:</strong> Habla con tu pareja,
+              familia, amigos. Considera unirte a grupos de apoyo.
+            </li>
+          </ul>
+
+          <img
+            src="../images/bienestarEmocional.png"
+            alt="Apoyo emocional durante el embarazo"
+            class="card-image"
+            style="margin-top: 20px"
+          />
+        </div>
+
+        <div class="wellness-card">
+          <div class="wellness-header">
+            <div class="wellness-icon"><i class="fas fa-syringe"></i></div>
+            <h3 class="wellness-title">Insulina (si el médico lo indica)</h3>
+          </div>
+
+          <div class="info-highlight">
+            <i class="fas fa-check-circle"></i> La insulina es una opción de
+            tratamiento segura y eficaz durante el embarazo si la dieta y el
+            ejercicio no son suficientes para controlar los niveles de glucosa.
+          </div>
+
+          <ul class="factor-list">
+            <li>
+              <i class="fas fa-shield-alt"></i>
+              <strong>Aplicación segura:</strong> Tu médico te enseñará cómo y
+              cuándo inyectarte la insulina. Las agujas son muy finas y las
+              inyecciones son subcutáneas.
+            </li>
+            <li>
+              <i class="fas fa-hand-holding-heart"></i>
+              <strong>Complemento al tratamiento:</strong> La insulina no
+              reemplaza la importancia de la alimentación saludable y el
+              ejercicio; los complementa para asegurar los mejores resultados.
+            </li>
+          </ul>
+
+          <div class="info-highlight" style="margin-top: 20px">
+            <i class="fas fa-lightbulb"></i> Recuerda que el uso de insulina es
+            temporal en la mayoría de los casos de diabetes gestacional y
+            desaparece después del parto.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p>© 2025 Blog sobre Diabetes Gestacional</p>
+      <div class="socials">
+        <a href="../index.html">Inicio</a> |
+        <a href="generalidades.html">Generalidades</a> |
+        <a href="diagnostico.html">Diagnostico</a> |
+        <a href="alimentacion.html">Alimentación</a>
+      </div>
+    </footer>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+      <img src="" alt="Imagen ampliada" />
+    </div>
+
+    <script>
+      const menuToggle = document.getElementById("menu-toggle");
+      const nav = document.getElementById("nav-links");
+      const lightbox = document.getElementById("lightbox");
+      const lightboxImg = lightbox.querySelector("img");
+
+      menuToggle.addEventListener("click", () => {
+        nav.classList.toggle("active");
+      });
+
+      // Lightbox para imágenes
+      document.querySelectorAll(".card-image").forEach((img) => {
+        img.addEventListener("click", () => {
+          lightbox.classList.add("active");
+          lightboxImg.src = img.src;
+        });
+      });
+
+      lightbox.addEventListener("click", () => {
+        lightbox.classList.remove("active");
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,168 @@
+/* Estilos de la Sección "Hero" */
+.hero {
+  background: url("../images/fondo.jpeg") no-repeat center center;
+  background-size: cover;
+  color: #ffffff;
+  text-align: center;
+  padding: 150px 20px 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 600px;
+}
+
+.hero h1 {
+  font-size: 3.8em;
+  margin-bottom: 10px;
+  background: linear-gradient(90deg, #d63384, #9d4edd, #c77dff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.35);
+  letter-spacing: 1px;
+}
+
+/* Estilos de la Sección de Tarjetas */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 50px 20px;
+  max-width: 1200px;
+  margin: -100px auto 0;
+  position: relative;
+  z-index: 5;
+}
+
+.card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  flex: 1;
+  min-width: 250px;
+  max-width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  display: flex; /* Flex interno */
+  flex-direction: column; /* Elementos en columna */
+  align-items: center;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+  width: 200px;
+  height: 200px;
+  object-fit: contain; /* Mantiene proporción */
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.card h3 {
+  color: #282c34;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.card p {
+  flex-grow: 1; /* Empuja el botón hacia abajo */
+  color: #444;
+  font-size: 0.95em;
+  margin-bottom: 15px;
+}
+
+.card button {
+  background-color: transparent;
+  color: #ff69b4;
+  border: 2px solid #ff69b4;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin-top: auto; /* Se pega al fondo */
+}
+
+.card button:hover {
+  background-color: #ff69b4;
+  color: #ffffff;
+}
+
+.video-container {
+  margin: 30px 0;
+  border-radius: 40px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-border-radius: 40px;
+  -moz-border-radius: 40px;
+  -ms-border-radius: 40px;
+  -o-border-radius: 40px;
+}
+
+video {
+  width: 90%;
+  display: block;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+/* Modal del video */
+.modal {
+  display: none; /* Oculto por defecto */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Fondo gris oscuro */
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  max-width: 90%;
+  max-height: 80%;
+}
+
+.modal-content video {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Botón inicial */
+.start-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#start-btn {
+  background: linear-gradient(135deg, #ff69b4, #ffb6c1);
+  border: none;
+  padding: 12px 25px;
+  font-size: 1.2em;
+  color: white;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+#start-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
