@@ -82,6 +82,24 @@
               alt="Mujer embarazada usando un glucómetro"
               class="card-image"
             />
+
+            <div id="video" class="video-container">
+              <div class="modal-content">
+                <video id="video" controls width="640" height="360">
+                  <source
+                    src="https://www.dropbox.com/scl/fi/zrob5241zqc15r257gqyx/medirazucar.mp4?rlkey=3f5of4u5icn6s05lmz96bui52&st=si3x2j7l&raw=1"
+                    type="video/mp4"
+                  />
+                  Tu navegador no soporta el elemento de video.
+                </video>
+              </div>
+            </div>
+
+            <img
+              src="../images/comorealizarprueba.jpeg"
+              alt="Mujer embarazada usando un glucómetro"
+              class="card-image"
+            />
           </div>
         </div>
 
@@ -145,13 +163,11 @@
         </div>
       </div>
 
-
-
       <div id="video" class="video-container">
         <div class="modal-content">
-          <video id="video" controls>
+          <video id="video" controls width="auto" height="auto">
             <source
-              src="https://dl.dropboxusercontent.com/scl/fi/i3j863pdn3ax11w417adt/video1.mp4?rlkey=myf1gljmthazal2c3hzk27j7q&st=wqii3wsg"
+              src="https://www.dropbox.com/scl/fi/rvo0zztpd90ol9spkz3nr/ejercicios.mp4?rlkey=gx2s5w35sw4uv6wrhfs4nsfay&st=qvwq019n&raw=1"
               type="video/mp4"
             />
             Tu navegador no soporta el elemento de video.
@@ -232,6 +248,27 @@
       </div>
     </div>
 
+    <div class="custom-carousel">
+      <div class="custom-slides">
+        <img src="../images/aplicarinyeccion.jpeg" class="custom-active" />
+        <img src="../images/inyeccioninsulina.jpeg" />
+        <img src="../images/inyeccioninsulina2.jpeg" />
+        <img src="../images/inyeccioninsulina3.jpeg" />
+
+        <!-- Botones carrusel -->
+        <button class="custom-prev-btn">&#10094;</button>
+        <button class="custom-next-btn">&#10095;</button>
+      </div>
+    </div>
+
+    <!-- Lightbox fullscreen -->
+    <div id="custom-lightbox" class="custom-lightbox">
+      <span class="custom-close">&times;</span>
+      <img class="custom-lightbox-img" />
+      <button class="custom-lightbox-prev">&#10094;</button>
+      <button class="custom-lightbox-next">&#10095;</button>
+    </div>
+
     <footer>
       <p>© 2025 Blog sobre Diabetes Gestacional</p>
       <div class="socials">
@@ -267,6 +304,95 @@
 
       lightbox.addEventListener("click", () => {
         lightbox.classList.remove("active");
+      });
+    </script>
+    <script>
+      // --- Carrusel normal ---
+      const customSlides = document.querySelectorAll(".custom-slides img");
+      let customIndex = 0;
+
+      function showCustomSlide(i) {
+        customSlides.forEach((img, idx) =>
+          img.classList.toggle("custom-active", idx === i)
+        );
+      }
+
+      const customNextBtn = document.querySelector(".custom-next-btn");
+      const customPrevBtn = document.querySelector(".custom-prev-btn");
+
+      if (customNextBtn && customPrevBtn) {
+        customNextBtn.onclick = () => {
+          customIndex = (customIndex + 1) % customSlides.length;
+          showCustomSlide(customIndex);
+        };
+
+        customPrevBtn.onclick = () => {
+          customIndex =
+            (customIndex - 1 + customSlides.length) % customSlides.length;
+          showCustomSlide(customIndex);
+        };
+      }
+
+      // --- Lightbox fullscreen ---
+      const customLightbox = document.getElementById("custom-lightbox");
+      const customLightboxImg = document.querySelector(".custom-lightbox-img");
+      const customCloseBtn = document.querySelector(".custom-close");
+      const customLightboxNext = document.querySelector(
+        ".custom-lightbox-next"
+      );
+      const customLightboxPrev = document.querySelector(
+        ".custom-lightbox-prev"
+      );
+
+      // Abrir lightbox al hacer clic en cualquier imagen del carrusel
+      customSlides.forEach((img, idx) => {
+        img.addEventListener("click", () => {
+          customIndex = idx;
+          customLightbox.style.display = "flex";
+          customLightboxImg.src = img.src;
+        });
+      });
+
+      // Cerrar lightbox
+      customCloseBtn.addEventListener("click", () => {
+        customLightbox.style.display = "none";
+      });
+
+      // Navegar dentro del lightbox
+      customLightboxNext.addEventListener("click", () => {
+        customIndex = (customIndex + 1) % customSlides.length;
+        customLightboxImg.src = customSlides[customIndex].src;
+      });
+
+      customLightboxPrev.addEventListener("click", () => {
+        customIndex =
+          (customIndex - 1 + customSlides.length) % customSlides.length;
+        customLightboxImg.src = customSlides[customIndex].src;
+      });
+
+      // Cerrar haciendo clic fuera de la imagen
+      customLightbox.addEventListener("click", (e) => {
+        if (e.target === customLightbox) {
+          customLightbox.style.display = "none";
+        }
+      });
+
+      // Extra: cerrar con ESC y navegar con flechas
+      document.addEventListener("keydown", (e) => {
+        if (customLightbox.style.display === "flex") {
+          if (e.key === "Escape") {
+            customLightbox.style.display = "none";
+          }
+          if (e.key === "ArrowRight") {
+            customIndex = (customIndex + 1) % customSlides.length;
+            customLightboxImg.src = customSlides[customIndex].src;
+          }
+          if (e.key === "ArrowLeft") {
+            customIndex =
+              (customIndex - 1 + customSlides.length) % customSlides.length;
+            customLightboxImg.src = customSlides[customIndex].src;
+          }
+        }
       });
     </script>
   </body>

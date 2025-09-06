@@ -140,8 +140,26 @@ video {
 .modal-content video {
   width: 100%;
   height: auto;
+  max-width: 90%;
   border-radius: 10px;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+}
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* relación 16:9 → puedes cambiarla */
+  height: 0;
+}
+
+.video-wrapper video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* mantiene proporciones sin deformar */
+  border-radius: 8px; /* opcional */
 }
 
 /* Botón inicial */
